@@ -4,17 +4,17 @@
 print("Werte ohne Einheiten eingeben")
 print("Bei Unbekannte Werte 0 eingben")
 
-stromRichtg = int(input("Stromrichtig? (0/1)"))
+stromRichtg = int(input("Stromrichtig? (0/1) "))
 if stromRichtg:
-    Um = float(input(" U = "))
+    Um = float(input("U = "))
     Im = float(input("I = "))
     RiA = float(input("RiA = "))
 
     stromRichtg = {"Um":Um,"Im":Im,"RiA":RiA}
 
-spannungsRichtg = int(input("Spannungsrichtig? (0/1)"))
+spannungsRichtg = int(input("Spannungsrichtig? (0/1) "))
 if spannungsRichtg:
-    Um = float(input(" U = "))
+    Um = float(input("U = "))
     Im = float(input("I = "))
     RiV = float(input("RiV = "))
     
@@ -27,4 +27,14 @@ if stromRichtg:
     stromRichtg["R"] = R
     stromRichtg["F"] = stromRichtg["RiA"]
     stromRichtg["f"] = round((stromRichtg["RiA"]/R)*100,2)
+    print(stromRichtg)
+
+if spannungsRichtg:
+    Rm =  round(spannungsRichtg["Um"]/spannungsRichtg["Im"],6)
+    spannungsRichtg["Rm"] = Rm
+    R = round(1/(1/Rm - 1/spannungsRichtg["RiV"]),6)
+    spannungsRichtg["R"] = R
+    spannungsRichtg["F"] = Rm -R
+    spannungsRichtg["f"] = round((spannungsRichtg["F"]/R)*100,2)
+    print(spannungsRichtg)
 
