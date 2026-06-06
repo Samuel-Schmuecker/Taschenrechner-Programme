@@ -9,4 +9,5 @@ if stromRichtg:
     stromRichtg["F"] = stromRichtg["RiA"]
     stromRichtg["f"] = round((stromRichtg["RiA"]/R)*100,2)
 
-print(stromRichtg)
+for key in stromRichtg:
+    print(f"{key} = {stromRichtg[key]}")

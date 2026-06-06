@@ -27,7 +27,6 @@ if stromRichtg:
     stromRichtg["R"] = R
     stromRichtg["F"] = stromRichtg["RiA"]
     stromRichtg["f"] = round((stromRichtg["RiA"]/R)*100,2)
-    print(stromRichtg)
 
 if spannungsRichtg:
     Rm =  round(spannungsRichtg["Um"]/spannungsRichtg["Im"],6)
@@ -36,5 +35,14 @@ if spannungsRichtg:
     spannungsRichtg["R"] = R
     spannungsRichtg["F"] = Rm -R
     spannungsRichtg["f"] = round((spannungsRichtg["F"]/R)*100,2)
-    print(spannungsRichtg)
 
+
+if stromRichtg:
+    print("StromRichtig")
+    for key in stromRichtg:
+        print(f"{key} = {stromRichtg[key]}") 
+
+if spannungsRichtg:
+    print("SpannungsRichtig")
+    for key in spannungsRichtg:
+        print(f"{key} = {spannungsRichtg[key]}") 
