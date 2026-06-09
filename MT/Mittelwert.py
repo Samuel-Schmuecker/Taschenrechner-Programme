@@ -15,7 +15,7 @@ def werteEinlesen()->tuple:
     #T,werte = 2,[(3,1),(0,1)]
     #############################################################
     #'''
-    T = int(input("Wie lang ist die Periode T? "))
+    T = int(input("Wie lang ist die \nPeriode T? "))
     print("Eigabe der Spannungswerte: ")
     werte = []
     i = 1
@@ -23,10 +23,12 @@ def werteEinlesen()->tuple:
     while True:
         if sum_t >= T:
             break
-        u = input("U",i," = ")
+        text = "U"+str(i)+" = "
+        u = input(text)
         if u == "":
             break
-        delta_t = input("delta_t",i," = ")
+        text = "delta_t"+str(i)+" = "
+        delta_t = input(text)
 
         try:
             u = float(u)
@@ -131,7 +133,7 @@ def plotDreiecksSpannung(wert:list,mittelwert:float)->None:
          
 
 while True:
-    form = int(input("Ist es eine Sinus-, Rechteck oder Dreiecksspannung? (1,2,3): "))
+    form = int(input("Ist es eine Sinus-, \nRechteck oder Dreiecksspannung? \n(1,2,3): "))
     if form == 1:
         T,werte = werteEinlesen()
         mittelwert, gleichrichtwert, effektivwert = wertBerechnen(T, werte, form)
