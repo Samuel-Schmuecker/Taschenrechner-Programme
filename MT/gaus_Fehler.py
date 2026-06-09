@@ -24,7 +24,7 @@ for x in messwerte:
 xMittel = round(xMittel/anzahl,6)
 
 print()
-print("Mittelwert = ",fomatString.format(xMittel))
+print("Mittelwert = ",xMittel)
 
 #2. Standardabweichung s
 nenner = 0
