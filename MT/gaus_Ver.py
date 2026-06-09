@@ -77,6 +77,7 @@ print("z = ",z)
 print()
 print("Tabelle: Quantile der Normalverteilung")
 a,zTabelle = alphaWertBestimmen(z)
+a = round(a,4)
 print("a = ",a)
 print("zTabelle = ",zTabelle)
 
@@ -86,10 +87,11 @@ print("Wahrscheinlichkeit für \nx < ",xOberGrenze)
 print(w,"%")
 
 print()
-untergrenze = int(input("Untergrezne? (0/1) "))
 
-if untergrenze:
-    xUnterGrenze = float(input("x Untergrenze = "))
+xUnterGrenze = float(input("x Untergrenze = "))
+
+if xUnterGrenze:
+   
 
     zu = round((xUnterGrenze-xMittel)/u,6)
 
@@ -111,10 +113,10 @@ if untergrenze:
         wu = 100-wu
     
     print()
-    print("Wahrscheinlichkeit für \nx > ",xUnterGrenze)
+    print("Wahrscheinlichkeit fuer \nx < ",xUnterGrenze)
     print(wu,"%")
 
     wges = w-wu
     print()
-    print("Wahrscheinlichkeit für \nx zwichen xu und xo")
+    print("Wahrscheinlichkeit fuer \nx zwichen xu und xo")
     print(wges,"%")

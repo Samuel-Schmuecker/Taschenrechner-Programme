@@ -7,12 +7,15 @@
 #messwerte = [1, 1.1 ,0.95 ,1.15 ,1.2]   #
 ###########################################
 
+fomatString = "{:0.3e}"
 
 #1. Mittelwert Bilden
-anzahl = int(input("Anzhal Messwert? "))
+anzahl = int(input("Anzahl Messwert? "))
 messwerte = []
 for i in range(anzahl):
-    messwerte.append(float(input("X",i+1, " = ")))
+    text = "X"+str(i+1)+" = "
+    eingabe = float(input(text))
+    messwerte.append(eingabe)
 
 
 xMittel = 0
@@ -21,7 +24,7 @@ for x in messwerte:
 xMittel = round(xMittel/anzahl,6)
 
 print()
-print("Mittelwert = ",xMittel)
+print("Mittelwert = ",fomatString.format(xMittel))
 
 #2. Standardabweichung s
 nenner = 0
@@ -29,13 +32,13 @@ for x in messwerte:
     nenner += (x-xMittel)**2
 s = round((nenner/(anzahl-1))**0.5,6)
 
-print("Standardabweichung s = ",s)
+print("Standardabweichung\ns = ",s)
 
 #3. Bildung er empirishen Standardabweichung u
 u = round(s/(anzahl**0.5),6)
 print()
 print("empirische Standartabweichung")
-print("u = ",u)
+print("u = ",fomatString.format(u))
 
 #4. Ergebniss 
 print()
@@ -48,7 +51,7 @@ if sicherheit:
     print()
     print("xMittel +/- ",sicherheit,"*u ")
     deltaX = sicherheit*u
-    print(xMittel," +/- ", deltaX)
+    print(xMittel," +/- ", fomatString.format(deltaX))
     print()
 
 #Berüksichtigung des Student-t-Faktors
@@ -64,17 +67,17 @@ if anzahl in n:
     if sicherheit == 1:
         print("Verbessert: (Student-t)")
         deltaX =  round(s68[i]*u,6)
-        print(xMittel,"+/-", deltaX )
+        print(xMittel,"+/-", fomatString.format(deltaX) )
 
     elif sicherheit == 2:
         print("Verbessert: (Student-t)")
         deltaX = round(s95[i]*u,6)
-        print(xMittel,"+/-", deltaX )
+        print(xMittel,"+/-", fomatString.format(deltaX) )
     
     elif sicherheit == 3:
         print("Verbessert: (Student-t)")
         deltaX = round(s99[i]*u ,6)
-        print(xMittel,"+/-", deltaX)
+        print(xMittel,"+/-", fomatString.format(deltaX))
 
     else:
         print("keine gespeicheten Wete für Student-t")
