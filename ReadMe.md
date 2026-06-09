@@ -1,4 +1,4 @@
-# Dokumentation der MicroPython-Messprogramme (Casio fx-9860GIII)
+# Dokumentation der MicroPython-MessTechnikProgramme (Casio fx-9860GIII)
 
 ## 1. A_D_Wndl.py 
 Programm zur Berechnung der wichtigsten Kenngrößen eines A/D-Wandlers.
