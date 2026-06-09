@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt 
 #Testwerte:
+
 lagerabstand = 160
 xKrafte = [(300,0,85.55)]
 yKrafte = [(-1120,60)]
@@ -7,6 +8,7 @@ zKrafte = [(-420,60)]
 
 lagerA = {"Fx":None,"Fy":None,"Fz":None}
 lagerB = {"Fx":None,"Fy":None,"Fz":None}
+
 '''
 print("Drehpunkt in Lager A legen!")
 lagerabstand = float(input("Abstand zwischen den Lagern: "))

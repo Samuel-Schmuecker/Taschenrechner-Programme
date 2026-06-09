@@ -40,9 +40,9 @@ if spannungsRichtg:
 if stromRichtg:
     print("StromRichtig")
     for key in stromRichtg:
-        print(f"{key} = {stromRichtg[key]}") 
+        print(key, " = " ,stromRichtg[key]) 
 
 if spannungsRichtg:
     print("SpannungsRichtig")
     for key in spannungsRichtg:
-        print(f"{key} = {spannungsRichtg[key]}") 
+        print(key, " = ", spannungsRichtg[key]) 

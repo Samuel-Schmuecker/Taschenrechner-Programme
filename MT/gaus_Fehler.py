@@ -7,13 +7,13 @@
 #messwerte = [1, 1.1 ,0.95 ,1.15 ,1.2]   #
 ###########################################
 
-#'''
+
 #1. Mittelwert Bilden
 anzahl = int(input("Anzhal Messwert? "))
 messwerte = []
 for i in range(anzahl):
-    messwerte.append(float(input(f"X{i+1} = ")))
-#'''
+    messwerte.append(float(input("X",i+1, " = ")))
+
 
 xMittel = 0
 for x in messwerte:
@@ -46,7 +46,7 @@ sicherheit = int(input(""))
 
 if sicherheit:   
     print()
-    print(f"xMittel +/- {sicherheit}*u ")
+    print("xMittel +/- ",sicherheit,"*u ")
     deltaX = sicherheit*u
     print(xMittel," +/- ", deltaX)
     print()

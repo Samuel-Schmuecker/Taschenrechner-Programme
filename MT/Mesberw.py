@@ -13,11 +13,11 @@ if spannungsmessung:
 
     u = Umess-Um
     Rv = round(u/Im, 9)
-    print(f"Rv = {Rv} Ohm")
+    print("Rv = ",Rv," Ohm")
 
 else : 
     Imess = float(input("Was soll Amess sein? "))
 
     i = Imess-Im
     Rn = round(Um/i, 9)
-    print(f"Shuntwiderstand = {Rn} Ohm")
+    print("Shuntwiderstand = ",Rn," Ohm")
