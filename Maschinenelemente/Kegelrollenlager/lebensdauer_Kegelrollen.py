@@ -6,8 +6,12 @@
 #Testwerte Aufgabe 33
 #lager1 = {"Fa": 5400, "Fr": 21450, "e": 0.35, "C": 420000, "X": 0.4, "Y": 1.74, "n": 1000, "Kugeln?" : 0}
 #lager2 = {"Fr": 29905, "e": 0.35, "C": 420000, "X": 1, "Y": 1.74, "n": 1000, "Kugeln?" : 0}
+#Testwerte Aufgabe 18.27
+#lager1={'Fa': 22000.0, 'Fr': 34200.0, 'e': 0.44, 'C': 490000.0, 'X': 0.4, 'Y': 1.38, 'n': 1500.0, 'Kugeln?': 0}
+#lager2={'Fr': 35230.0, 'e': 0.44, 'C': 490000.0, 'X': 0.4, 'Y': 1.38, 'n': 1500.0, 'Kugeln?': 0}
 
 # Eingabe der Werte aus dem Tabellen Buch
+
 
 print("Lager1:")
 lager1 = {
@@ -18,8 +22,9 @@ lager1 = {
     "X" : float(input("X: ")),
     "Y" : float(input("Y: ")),
     "n" : float(input("n: ")),
-    "Kugeln?" : bool(input("Kugellager? 0 oder 1: "))
+    "Kugeln?" : bool(int(input("Kugellager? 0 oder 1: ")))
     }
+
 
 print("Lager2:")
 lager2 = { 
@@ -29,8 +34,9 @@ lager2 = {
     "X" : float(input("X: ")),
     "Y" : float(input("Y: ")),
     "n" : float(input("n: ")),
-    "Kugeln?" : bool(input("Kugellager? 0 oder 1: "))
+    "Kugeln?" : bool(int(input("Kugellager? 0 oder 1: ")))
     }
+
 
 
 

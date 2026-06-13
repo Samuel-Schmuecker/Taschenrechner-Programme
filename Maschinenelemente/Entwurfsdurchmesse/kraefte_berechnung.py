@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt 
+#import matplotlib.pyplot as plt 
 #Testwerte:
 
 lagerabstand = 160
@@ -6,17 +6,18 @@ xKrafte = [(300,0,85.55)]
 yKrafte = [(-1120,60)]
 zKrafte = [(-420,60)]
 
+
 lagerA = {"Fx":None,"Fy":None,"Fz":None}
 lagerB = {"Fx":None,"Fy":None,"Fz":None}
 
-'''
+
 print("Drehpunkt in Lager A legen!")
 lagerabstand = float(input("Abstand zwischen den Lagern: "))
 
 anzahlX = int(input("Wie viele X-Kräfte gibt es? "))
 xKrafte = []
 for i in range(anzahlX):
-    f = float(input(f"F{i+1} = "))
+    f = float(input("F"+ str(i+1) +" = "))
     y = float(input("y-Abstand = "))
     z = float(input("z-Abstand = "))
     xKrafte.append((f,y,z))
@@ -24,17 +25,17 @@ for i in range(anzahlX):
 anzahlY = int(input("Wie viele Y-Kräfte gibt es? "))
 yKrafte = []
 for i in range(anzahlY):
-    f = float(input(f"F{i+1} = "))
+    f = float(input("F"+ str(i+1) +" = "))
     x = float(input("x-Abstand = "))
     yKrafte.append((f,x))
 
 anzahlZ = int(input("Wie viele Z-Kräfte gibt es? "))
 zKrafte = []
 for i in range(anzahlZ):
-    f = float(input(f"F{i+1} = "))
+    f = float(input("F"+ str(i+1) +" = "))
     x = float(input("x-Abstand = "))
     zKrafte.append((f,x))
-'''
+
     
 #Moment um z-Achse
 mz = 0
@@ -46,6 +47,7 @@ for f,x in yKrafte:
 lagerB["Fy"] = -(mz/lagerabstand)
 yKrafte.append((lagerB["Fy"],lagerabstand))
 
+#Moment um y-Achse
 my = 0
 for f,y,z in xKrafte:
     my+= (f*z)
@@ -69,11 +71,18 @@ lagerA["Fz"] = 0-sumz
 zKrafte.append((lagerA["Fz"],0))
 
 
-print("Lager A = ", lagerA)
-print("Lager B = ", lagerB)
+print("Lager A:")
+for key in lagerA:
+    print(key, " = ",lagerA[key])
+
+print()
+print("Lager B:")
+for key in lagerB:
+    print(key, " = ",lagerB[key])
 
 # Anzeige:
-
+#Geht auf dem Taschenrechner Nicht
+'''
 xWerte = []
 for i in range(lagerabstand+1): # +1 damit [0-lagerabstand]
     xWerte.append(i)
@@ -132,3 +141,4 @@ plt.plot(xWerteOrginal,mzWerte,color = 'r') # Mz
 plt.plot(xWerteOrginal,xAchse,color = 'k') # X-Achse
 
 plt.show()
+'''
